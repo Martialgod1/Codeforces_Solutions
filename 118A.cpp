@@ -1,23 +1,23 @@
 #include <bits/stdc++.h>
-
 using namespace std;
+ 
+int main(){
 
-int main()
-{
-string s;
-s="tour";
-int size;
-char replacement = '.';
-size= s.size();
-for (int i = 0; i < size; i++)
-{
-    if (s[i]='A'||'E'||'I'||'O'||'U'||'a'||'e'||'i'||'o'||'u')
+    string s;
+    cin>>s;
+    for (int i = 0; i < s.size();)
     {
-        s[i] =replacement;
-    }     
-}
+        s[i]=tolower(s[i]);
+        if (s[i]=='a'||s[i]=='e'||s[i]=='i'||s[i]=='o'||s[i]=='u'||s[i]=='y')
+        {
+            i++;
+        }
+        else
+        {
+            cout<<"."<<s[i];
+            i++;
+        }        
+    }   
 
-cout<<s;
-
-return 0;
+	return 0;
 }
